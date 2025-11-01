@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('strategic_contents', function (Blueprint $table) {
             $table->id();
-            $table->string('type')->index(); 
+            $table->string('type')->index();
             $table->text('content');
             $table->timestamps();
         });
