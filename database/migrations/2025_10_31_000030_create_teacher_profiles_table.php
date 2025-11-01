@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('teacher_profiles', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('subject_area')->nullable();
+            $table->json('subject_areas')->nullable();
             $table->text('professional_summary')->nullable();
             $table->string('cv_path')->nullable();
             $table->timestamps();
